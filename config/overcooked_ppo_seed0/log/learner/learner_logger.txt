@@ -1,0 +1,120 @@
+[2023-11-30 23:57:39][base_learner.py:338][INFO] [RANK0]: DI-engine DRL Policy
+VAC(
+  (encoder): OEncoder(
+    (act): ReLU()
+    (main): Sequential(
+      (0): Conv2d(26, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (1): ReLU()
+      (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (3): ReLU()
+      (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (5): ReLU()
+      (6): AdaptiveAvgPool2d(output_size=(1, 1))
+      (7): Flatten(start_dim=1, end_dim=-1)
+    )
+  )
+  (critic_head): RegressionHead(
+    (main): Sequential(
+      (0): Linear(in_features=64, out_features=64, bias=True)
+      (1): ReLU()
+    )
+    (last): Linear(in_features=64, out_features=1, bias=True)
+  )
+  (actor_head): DiscreteHead(
+    (Q): Sequential(
+      (0): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): ReLU()
+      )
+      (1): Sequential(
+        (0): Linear(in_features=64, out_features=6, bias=True)
+      )
+    )
+  )
+  (actor): ModuleList(
+    (0): OEncoder(
+      (act): ReLU()
+      (main): Sequential(
+        (0): Conv2d(26, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU()
+        (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (3): ReLU()
+        (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (5): ReLU()
+        (6): AdaptiveAvgPool2d(output_size=(1, 1))
+        (7): Flatten(start_dim=1, end_dim=-1)
+      )
+    )
+    (1): DiscreteHead(
+      (Q): Sequential(
+        (0): Sequential(
+          (0): Linear(in_features=64, out_features=64, bias=True)
+          (1): ReLU()
+        )
+        (1): Sequential(
+          (0): Linear(in_features=64, out_features=6, bias=True)
+        )
+      )
+    )
+  )
+  (critic): ModuleList(
+    (0): OEncoder(
+      (act): ReLU()
+      (main): Sequential(
+        (0): Conv2d(26, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): ReLU()
+        (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (3): ReLU()
+        (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (5): ReLU()
+        (6): AdaptiveAvgPool2d(output_size=(1, 1))
+        (7): Flatten(start_dim=1, end_dim=-1)
+      )
+    )
+    (1): RegressionHead(
+      (main): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): ReLU()
+      )
+      (last): Linear(in_features=64, out_features=1, bias=True)
+    )
+  )
+)
+[2023-11-30 23:57:53][base_learner.py:338][INFO] [RANK0]: learner save ckpt in ./overcooked_ppo_seed0/ckpt\ckpt_best.pth.tar
+[2023-11-30 23:57:55][base_learner.py:338][INFO] [RANK0]: === Training Iteration 0 Result ===
+[2023-11-30 23:57:55][learner_hook.py:224][INFO] 
++-------+------------+----------------+-----------------+----------------+
+| Name  | cur_lr_avg | total_loss_avg | policy_loss_avg | value_loss_avg |
++-------+------------+----------------+-----------------+----------------+
+| Value | 0.000500   | 0.053691       | 0.000000        | 0.143217       |
++-------+------------+----------------+-----------------+----------------+
++-------+------------------+-------------+--------------+---------------+
+| Name  | entropy_loss_avg | adv_max_avg | adv_mean_avg | approx_kl_avg |
++-------+------------------+-------------+--------------+---------------+
+| Value | 1.791728         | 5.564011    | 0.000000     | 0.000000      |
++-------+------------------+-------------+--------------+---------------+
++-------+--------------+---------------+----------------+
+| Name  | clipfrac_avg | value_max_avg | value_mean_avg |
++-------+--------------+---------------+----------------+
+| Value | 0.000000     | -0.015135     | -0.016918      |
++-------+--------------+---------------+----------------+
+
+[2023-11-30 23:57:55][base_learner.py:338][INFO] [RANK0]: learner save ckpt in ./overcooked_ppo_seed0/ckpt\iteration_0.pth.tar
+[2023-11-30 23:57:59][base_learner.py:338][INFO] [RANK0]: === Training Iteration 100 Result ===
+[2023-11-30 23:57:59][learner_hook.py:224][INFO] 
++-------+------------+----------------+-----------------+----------------+
+| Name  | cur_lr_avg | total_loss_avg | policy_loss_avg | value_loss_avg |
++-------+------------+----------------+-----------------+----------------+
+| Value | 0.000500   | 0.190929       | 0.000294        | 0.416725       |
++-------+------------+----------------+-----------------+----------------+
++-------+------------------+-------------+--------------+---------------+
+| Name  | entropy_loss_avg | adv_max_avg | adv_mean_avg | approx_kl_avg |
++-------+------------------+-------------+--------------+---------------+
+| Value | 1.772842         | 4.786079    | 0.000000     | 0.007459      |
++-------+------------------+-------------+--------------+---------------+
++-------+--------------+---------------+----------------+
+| Name  | clipfrac_avg | value_max_avg | value_mean_avg |
++-------+--------------+---------------+----------------+
+| Value | 0.064276     | 2.560578      | 2.009355       |
++-------+--------------+---------------+----------------+
+

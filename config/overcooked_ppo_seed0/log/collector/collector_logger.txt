@@ -1,0 +1,16 @@
+[2023-11-30 23:57:59][sample_serial_collector.py:406][INFO] collect end:
+episode_count: 8
+envstep_count: 128
+train_sample_count: 128
+avg_envstep_per_episode: 16.0
+avg_sample_per_episode: 16.0
+avg_envstep_per_sec: 2063.3406176137128
+avg_train_sample_per_sec: 2063.3406176137128
+avg_episode_per_sec: 128.95878860085705
+reward_mean: 5.0
+reward_std: 4.06201920231798
+reward_max: 11.0
+reward_min: 0.0
+total_envstep_count: 5248
+total_train_sample_count: 5248
+total_episode_count: 8
